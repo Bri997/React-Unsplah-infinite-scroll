@@ -18,7 +18,8 @@
     "express": "^4.16.4",
     "node-fetch": "^2.3.0",
     "universal-config": "^0.3.0",
-    "unsplash-js": "^4.8.0"
+    "unsplash-js": "^4.8.0",
+    "url-parse": "^1.4.4"
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
