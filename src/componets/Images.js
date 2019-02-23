@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Image from "./Image";
+import uuidv1 from "uuid";
 
 export class Images extends Component {
   state = {
@@ -25,6 +26,7 @@ export class Images extends Component {
         this.setState({ images: this.state.images.concat(res.data) })
       );
   };
+
   render() {
     console.log(this.state);
     return (
@@ -36,7 +38,7 @@ export class Images extends Component {
           loader={<h4>Loading...</h4>}
         >
           {this.state.images.map(image => (
-            <Image key={image.id} image={image} />
+            <Image key={uuidv1()} image={image} />
           ))}
         </InfiniteScroll>
       </div>
